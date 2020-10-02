@@ -11,8 +11,16 @@ leg room, onboard service, inflight wifi, food, online boarding, etc.
 After using EDA techniques to determine that the model was balanced and to eliminate features with strong collinearity (such as arrival and departure delays), I used Bayes 
 optimization to determine the best classification model to use for predicting the passenger satisfaction rating.  
 
-An optimized Light GBM model proved to be more effective than Random Forest and Logistic Regression models.  Within that model the most important features were the inflight 
-wifi rating, departure delay, checkin service rating, online boarding rating and seat comfort.
+An optimized Light GBM model proved to be more effective than Random Forest and Logistic Regression models. 
+
+Classifier          |   Precision |   Recall |   F1 |   AUC
+---------------------+-------------+----------+------+-------
+ Light GBM           |        0.96 |     0.96 | 0.96 |  0.95
+ Random Forest       |        0.92 |     0.92 | 0.92 |  0.92
+ Logistic Regression |        0.87 |     0.87 | 0.87 |  0.87
+ Dummy               |        0.32 |     0.57 | 0.41 |  0.5
+ 
+Within that model the most important features were the inflight wifi rating, departure delay, checkin service rating, online boarding rating and seat comfort.
 
 I would like to further study the breakdown of these results between business and personal travelers, as business travelers are significantly more profitable than personal
 travelers.  However in today's environment, business travel is down significantly and it feels important not to marginalize the experience of any traveler.
